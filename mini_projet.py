@@ -4,7 +4,7 @@ from random import*
 #Définition de la fonction nombre_mystere correspondant à une partie#
 #Retourne True (vrai) si le joueur a gagne#
 #Retourne False (faux) si le joueur a perdu#
-def nombre_mystère():           
+def nombre_mystere():           
     
     # Choix d'un nombre entier au hasard entre 1 et 50 #
     nbr_myst=randint(1,50)      
@@ -13,7 +13,7 @@ def nombre_mystère():
     for i in range(1,8):        
        
         # Recuperation de la proposition du joueur#
-    !    nb=int(input("Entrer un nombre:"))   
+        nb=int(input("Entrer un nombre:"))   
         
        # Le premier cas étant si nb (la proposition) est égale au nombre mystère #
         if nb==nbr_myst:
@@ -50,7 +50,7 @@ def nombre_mystère():
 #Programme Principal
 
 nb_parties = 0 #Variable contenant le nombre de partie jouée
-nb_parties_gagnées = 0 #Variable comptabilisant les victoires
+nb_parties_gagnees = 0 #Variable comptabilisant les victoires
 continuer_a_jouer = True #Variable pour gérer si le jouer souhaite continuer
 
 #Boucle de jeu principale
@@ -60,11 +60,11 @@ while continuer_a_jouer:
     nb_parties = nb_parties + 1  
     
     #Appel de la fonction de partie
-    resultat = nombre_mystère()
+    resultat = nombre_mystere()
 
     #Augmente de 1 le nombre de parties gagnées si le resultat est True (vrai)
     if resultat:
-        nb_parties_gagnées = nb_parties_gagnées + 1
+        nb_parties_gagnees = nb_parties_gagnees + 1
 
     #Demande si le joueur souhaite continuer
     question = input("Voulez-vous continuer à jouer [O/N]?")
@@ -75,5 +75,5 @@ while continuer_a_jouer:
 
 #Affichage du bilan
 print("\n###########################") # le charactere \n permet de sauter une ligne
-print("Vous avez gagné",nb_parties_gagnées,"partie(s) sur",nb_parties,"partie(s) jouée(s)")
+print("Vous avez gagné",nb_parties_gagnees,"partie(s) sur",nb_parties,"partie(s) jouée(s)")
 print("###########################")
